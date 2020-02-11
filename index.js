@@ -215,6 +215,7 @@ class SamPlugin {
    * Writes the SAM template string to the local files specified by the --output option
    */
   writeSamTemplate() {
+    debugger;
     const writeFilePromise = this.writeFile(this.serverless.providers.aws.options.output, this.samTemplate);
     this.serverless.cli.log("SAM template written to: " + path.resolve(this.serverless.providers.aws.options.output));
     return writeFilePromise;
